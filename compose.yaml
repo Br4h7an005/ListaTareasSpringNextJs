@@ -1,7 +1,8 @@
 services:
+  # servicio para postgresql 
   postgres:
     image: postgres:16-alpine
-    container_name: postgres-todo
+    container_name: postgres
     restart: always
     environment:
       POSTGRES_USER: todo_user
@@ -11,6 +12,18 @@ services:
       - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+
+  # Servicio para imagen de Spring Boot
+  spring-boot:
+    build:
+      context: ./TodoList
+      dockerfile: Dockerfile
+    container_name: spring-boot
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
 
 volumes:
   postgres_data:

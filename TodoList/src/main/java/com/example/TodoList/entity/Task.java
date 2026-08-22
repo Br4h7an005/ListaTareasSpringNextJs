@@ -1,13 +1,15 @@
 package com.example.TodoList.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Data
 @Entity
 @Table(name="tasks")
+@NoArgsConstructor
+@Getter
+@Setter
 public class Task {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,8 +22,13 @@ public class Task {
   private String description;
   
   @Column(nullable = false)
-  private Boolean completed;
+  private Boolean completed = Boolean.FALSE;
   
   @Column(name= "created_at", updatable = false)
   private LocalDateTime createdAt = LocalDateTime.now();
+  
+  public Task(String title, String description) {
+    this.title = title;
+    this.description = description;
+  }
 }
