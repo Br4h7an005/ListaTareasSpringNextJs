@@ -1,5 +1,3 @@
-"use client";
-
 interface TaskFormProps {
   createTask: (formData: FormData) => Promise<void>;
 }
