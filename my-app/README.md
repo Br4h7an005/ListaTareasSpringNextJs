@@ -7,9 +7,6 @@ El proyecto busca practicar conceptos fundamentales del stack:
 * ⚛️ **Next.js / React**
 * 🔷 **TypeScript**
 * 🎨 **Tailwind CSS**
-* ☕ **Spring Boot**
-* 🐘 **PostgreSQL**
-* 🐳 **Docker**
 
 ---
 
@@ -21,9 +18,7 @@ El proyecto busca practicar conceptos fundamentales del stack:
 | **React**        | Construcción de componentes e interfaz    |
 | **TypeScript**   | Tipado estático                           |
 | **Tailwind CSS** | Estilos y diseño de la interfaz           |
-| **Spring Boot**  | Backend y API REST                        |
-| **PostgreSQL**   | Base de datos                             |
-| **Docker**       | Contenedores y entorno de desarrollo      |
+
 
 ---
 
@@ -77,7 +72,7 @@ Docker Compose se utiliza para facilitar la ejecución de los diferentes servici
 ```text
 TodoList/
 │
-├── frontend/
+├── my-app/
 │   ├── app/
 │   ├── components/
 │   ├── services/
@@ -85,7 +80,7 @@ TodoList/
 │   ├── package.json
 │   └── ...
 │
-├── backend/
+├── TodoList/
 │   ├── src/
 │   ├── pom.xml
 │   ├── Dockerfile
@@ -105,9 +100,6 @@ Antes de ejecutar el proyecto necesitas tener instalado:
 
 * [Node.js](https://nodejs.org/)
 * [npm](https://www.npmjs.com/)
-* [Java](https://www.java.com/)
-* [Maven](https://maven.apache.org/)
-* [Docker](https://www.docker.com/)
 
 ---
 
@@ -143,7 +135,7 @@ La aplicación se actualizará automáticamente cuando realices cambios en el c�
 
 ## 🐳 Ejecutar con Docker
 
-Si el proyecto está configurado para ejecutarse mediante Docker Compose:
+El backend del proyecto está configurado para ejecutarse mediante Docker Compose:
 
 ```bash
 docker compose up -d --build
