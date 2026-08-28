@@ -54,7 +54,7 @@ export const taskService = {
      */
     async delete(taskId: number): Promise<void> {
         console.log("Eliminando tarea en la API: ", API_URL, taskId);
-        const response = await fetch(`${API_URL}/${taskId}`, {
+        const response = await fetch(`${API_URL}?id=${taskId}`, {
             method: "DELETE",
         });
 
